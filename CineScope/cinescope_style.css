@@ -1,0 +1,80 @@
+/* CineScope Studio — diseno cine negro / dorado */
+:root {
+  --cs-bg: #0b111c;
+  --cs-panel: #151d2b;
+  --cs-border: #2b3545;
+  --cs-text: #f4f0e9;
+  --cs-muted: #a7b0bd;
+  --cs-gold: #dbc087;
+}
+
+.stApp {
+  background: radial-gradient(ellipse at 78% 2%, rgba(176,139,79,.11), transparent 34%),
+              linear-gradient(160deg, #0a101a 0%, #0e1520 55%, #0b111b 100%);
+  color: var(--cs-text);
+}
+header[data-testid="stHeader"] { background: transparent; }
+#MainMenu, footer[data-testid="stFooter"] { visibility: hidden; }
+.block-container { max-width: 1420px; padding-top: 1.15rem; padding-bottom: 2.5rem; }
+
+.cs-hero { margin: 0 0 1.25rem; padding: .45rem 0 0; }
+.cs-brand { font-weight: 800; font-size: .78rem; letter-spacing: .21em; color: #e6d0a2; display:flex; align-items:center; gap:.7rem; }
+.cs-brand-muted { font-weight: 500; color: #778495; }
+.cs-mark { display: inline-flex; align-items:center; justify-content:center; width:32px; height:32px; border:1px solid #b79b69; border-radius:8px; font-size:1.12rem; }
+.cs-eyebrow { margin-top:1.6rem; color:#c4a975; letter-spacing:.24em; font-size:.67rem; font-weight:700; }
+.cs-dot { display:inline-block; width:4px;height:4px;background:#bfa269;border-radius:50%; vertical-align:middle; margin: 0 .65rem; }
+.cs-hero h1 { color:#f7f1e8; font-size:clamp(2.2rem,4.4vw,4.0rem); font-weight:740; line-height:1.04; letter-spacing:-.045em; margin:.48rem 0 .65rem; }
+.cs-hero h1 em { font-style:normal; color:#d2b782; }
+.cs-hero p { color:#b1b8c4; font-size:.95rem; margin:0; line-height:1.55; }
+.cs-hero-line { height:1px; background:linear-gradient(90deg, #c1a46b 0%, #334052 42%, transparent 100%); margin-top:1.35rem; }
+
+.cs-label { font-size:.65rem; font-weight:750; letter-spacing:.16em; color:#c6ad7e; padding:0 0 .45rem; }
+.cs-live { text-align:right; padding:.12rem 0 .1rem; font-size:.64rem; font-weight:750; letter-spacing:.09em; color:#e1c790; }
+.cs-live small { color:#8694a5; font-size:.60rem; font-weight:600; }
+.cs-live-dot { background:#60bb92; border-radius:50%; width:7px;height:7px;display:inline-block;margin-right:7px; }
+
+/* Los dos paneles principales usan st.container(border=True) */
+[data-testid="stVerticalBlockBorderWrapper"] {
+  background:rgba(20,29,43,.86);
+  border:1px solid #2b3545;
+  border-radius:17px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.13);
+}
+.cs-section-title { display:flex; align-items:baseline; gap:.5rem; margin:0 0 .5rem; font-size:.95rem; font-weight:780; letter-spacing:.08em; color:#f2eee8; }
+.cs-section-title>span { color:#d5b477; font-size:.78rem; }
+.cs-section-title small { color:#7e8b9d; font-size:.63rem; letter-spacing:.14em; margin-left:auto; }
+.cs-frame-meta { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.6rem; color:#9caabc; padding:.2rem 0 .3rem; font-weight:650; font-size:.64rem; letter-spacing:.09em; }
+.cs-empty { border:1px dashed #39475a; border-radius:12px; padding:4rem 1rem; text-align:center; color:#aab5c1; }
+
+/* Los resultados son HTML para poder controlar cada detalle de las barras. */
+.cs-result-card { background:linear-gradient(145deg, #1a2534, #141d2b); border:1px solid #364256; border-radius:14px; padding:1.15rem 1.2rem 1.05rem; margin:.2rem 0 .85rem; }
+.cs-result-top { display:flex; gap:.7rem; justify-content:space-between; align-items:center; }
+.cs-overline { font-size:.65rem; letter-spacing:.17em; color:#dfc58f; font-weight:800; }
+.cs-tiny { color:#8392a4; font-weight:650; font-size:.62rem; }
+.cs-result-name { font-size:clamp(1.5rem,2.1vw,2.12rem); line-height:1.15; color:#f6f0e6; font-weight:780; margin:.63rem 0 .2rem; letter-spacing:-.03em; }
+.cs-confidence { color:#d9bd87; font-size:1.55rem; font-weight:780; margin:0 0 1.05rem; }
+.cs-confidence>span { color:#9cabbc; font-size:.77rem; font-weight:500; }
+.cs-prob-title { border-top:1px solid #344052; padding-top:.85rem; margin-bottom:.72rem; color:#9fabba; font-size:.62rem; letter-spacing:.13em; font-weight:740; }
+.cs-prob-line { display:flex; align-items:center; justify-content:space-between; gap:.5rem; color:#dbe1e8; font-size:.79rem; margin:.65rem 0 .3rem; }
+.cs-prob-line strong { color:#f3dfb5; font-weight:740; }
+.cs-track { height:7px; background:#303b4b; overflow:hidden; border-radius:7px; }
+.cs-fill { background:linear-gradient(90deg,#9c7f4e,#e6c88c); border-radius:7px; height:100%; }
+.cs-check { margin-top:.95rem; font-size:.73rem; font-weight:700; }
+.cs-ok { color:#7bd3aa; }
+.cs-bad { color:#e0ad94; }
+.cs-model-meta { margin-top:1.05rem; padding-top:.7rem; border-top:1px solid #344052; color:#8795a7; font-size:.71rem; }
+.cs-disclaimer { font-size:.72rem; color:#8291a4; line-height:1.55; padding:.2rem .1rem; }
+.cs-footer { display:flex; gap:1rem; justify-content:space-between; border-top:1px solid #293341; padding:1.1rem 0; margin-top:1.7rem; color:#788698; font-size:.61rem; letter-spacing:.14em; font-weight:700; }
+
+/* Widgets Streamlit: se mantienen nativos e interactivos. */
+.stButton button, [data-testid="stSegmentedControl"] button { border-radius:9px !important; }
+[data-testid="stSegmentedControl"] button[aria-pressed="true"] { background:#d6b77c !important; color:#121722 !important; }
+[data-testid="stImage"] img { border-radius:10px; }
+[data-testid="stSelectbox"] label, [data-testid="stFileUploader"] label { color:#c6d0de; }
+@media (max-width: 750px) {
+  .block-container { padding-top:1rem; }
+  .cs-hero h1 { font-size:2.5rem; }
+  .cs-live { text-align:left; }
+  .cs-footer { flex-direction:column; }
+  .cs-result-top { flex-wrap:wrap; }
+}
